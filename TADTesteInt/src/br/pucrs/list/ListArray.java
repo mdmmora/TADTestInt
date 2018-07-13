@@ -1,6 +1,5 @@
 package br.pucrs.list;
 
-
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
