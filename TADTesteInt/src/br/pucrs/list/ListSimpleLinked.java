@@ -7,24 +7,24 @@ import java.util.NoSuchElementException;
 public class ListSimpleLinked <D extends Comparable<D>> implements ListTAD<D>, Serializable, Iterable<D> {
 
 	/**
-	 * 
+	 *  Comentário
 	 */
 	private static final long serialVersionUID = 1L;
 
 	public class Node implements Serializable, Comparable<Node> {		
 
 	    private Node refNext;
-	    private D item;
+	    private D it;
 	    
 	    public Node()
 	    {
 	    	refNext = null;
-	    	item = null;
+	    	it = null;
 	    }
 	    
 	    public Node(D elem, Node n)
 	    {
-	    	this.item = elem;
+	    	this.it = elem;
 	    	refNext = n;
 	    }
 
@@ -35,10 +35,10 @@ public class ListSimpleLinked <D extends Comparable<D>> implements ListTAD<D>, S
 	    	{ return refNext; }
 	    
 	    public void setElem(D o) 
-	    	{ item = o; }
+	    	{ it = o; }
 	    
 	    public D getElem() 
-	    	{ return item; }
+	    	{ return it; }
 
 		public int compareTo(Node n) {
 			return this.getElem().compareTo(n.getElem());

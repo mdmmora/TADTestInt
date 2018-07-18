@@ -3,9 +3,14 @@ package br.pucrs.list;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-
+/****************8888
+ * 
+ * @author mcmor
+ *
+ * Comentário.
+ */
 public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializable {
-	private D [] vet;
+	private D [] vect;
 	private int qtdElem = 0;
 	private int corrente = -1;
 	
@@ -17,7 +22,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
         public D next() {
             if(position == qtdElem)
                 throw new NoSuchElementException();
-            D item = vet[position];
+            D item = vect[position];
             position++;
             return item;
         }
@@ -30,11 +35,11 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 	}
 	private void increaseVet()
 	{
-		D[] newVet = (D[]) new Comparable[(int)(vet.length * 1.5)];
+		D[] newVet = (D[]) new Comparable[(int)(vect.length * 1.5)];
 		
-		System.arraycopy(vet, 0, newVet, 0, vet.length);
+		System.arraycopy(vect, 0, newVet, 0, vect.length);
 		
-		vet = newVet;
+		vect = newVet;
 	}
 	
 	public ListArray(int n)
@@ -43,7 +48,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		if (n <= 0)
 			tam = 100;
 		
-		vet = (D[]) new Comparable[tam];
+		vect = (D[]) new Comparable[tam];
 	}
 	
 	public boolean set(int index, D elem)
@@ -52,7 +57,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		
 		if ((index >= 0) && (index < this.size()))
 			{
-				vet[index] = elem;
+				vect[index] = elem;
 				corrente = index;
 			}
 		else
@@ -67,7 +72,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		
 		if ((index >= 0) && (index < this.size()))
 			{
-				res = vet[index];
+				res = vect[index];
 				corrente = index;
 			}
 		else
@@ -81,15 +86,15 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		int i;
 		boolean res = true;
 		
-		if (this.size() == vet.length)
+		if (this.size() == vect.length)
 			increaseVet();
 		
 		if ((index >= 0) && (index <= this.size()))
 		{
 			for (i = this.size(); i > index; i--)
-				vet[i] = vet[i-1];
+				vect[i] = vect[i-1];
 			
-			vet[index] = elem;
+			vect[index] = elem;
 			corrente = index;
 			qtdElem++;
 		}
@@ -111,10 +116,10 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		
 		if ((index >= 0) && (index < this.size()))
 		{
-			res = vet[index];
+			res = vect[index];
 			
 			for (i = index; i < this.size()-1; i++)
-				vet[i] = vet[i+1];
+				vect[i] = vect[i+1];
 			
 			corrente = -1;
 			qtdElem--;
@@ -142,7 +147,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		if ((corrente >= 0) && (corrente < this.size()-1))
 			{
 				corrente = corrente + 1;
-				res = vet[corrente];
+				res = vect[corrente];
 			}
 
 		return res;
@@ -179,7 +184,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		int res = 0;
 		
 		for (int i = 0; i < this.size(); i++)
-			if (element.equals(vet[i]))
+			if (element.equals(vect[i]))
 				res++;
 		return res;
 	}
@@ -188,7 +193,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		D res = null;
 		
 		if (this.size() > 0)
-			res = vet[0];
+			res = vect[0];
 		
 		return res;
 	}
@@ -197,7 +202,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		D res = null;
 		
 		if (this.size() > 0)
-			res = vet[this.size()-1];
+			res = vect[this.size()-1];
 		
 		return res;
 	}
@@ -206,10 +211,10 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		D res = null;
 		
 		if (this.size() > 0) {
-			res = vet[0];
+			res = vect[0];
 			
 			for (int i = 0; i < this.size()-1; i++)
-				vet[i] = vet[i+1];
+				vect[i] = vect[i+1];
 			
 			qtdElem--;
 		}
@@ -221,7 +226,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		D res = null;
 		
 		if (this.size() > 0) {
-			res = vet[this.size() - 1];
+			res = vect[this.size() - 1];
 			qtdElem--;
 		}
 		
@@ -232,7 +237,7 @@ public class ListArray <D extends Comparable<D>> implements ListTAD<D>, Serializ
 		String res = "";
 		
 		for(int i = 0; i < this.size(); i++)
-			res = res + vet[i].toString();
+			res = res + vect[i].toString();
 		
 		return res;
 	}
