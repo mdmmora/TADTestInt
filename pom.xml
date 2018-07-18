@@ -2,31 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.pucrs</groupId>
-    <artifactId>FXMavenArticle</artifactId>
+    <groupId>br.pucrs</groupId>
+    <artifactId>list</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>FXMavenArticle</name>
+    <name>Listas em Java</name>
 
-    <description>Example of super pom for Java application development</description>
+    <description>Só para testar </description>
 
     <developers>
         <developer>
-            <id>9999999</id>
-            <name>Student Name</name>
-            <email>student@theirmail.com</email>
+            <id>0000001</id>
+            <name>The Professor</name>
+            <email>michael.mora@pucrs.br</email>
         </developer>
     </developers>
 	
     <organization>
-        <name>Dawson College</name>
+        <name>ALESTI - Bel.Eng. SW - Politécnica PUCRS</name>
     </organization>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- class that has the main method -->
-        <mainClass>com.kenfogel.fxmavenarticle.MainApp</mainClass>
+        <mainClass>br.pucrs.list.MainApp</mainClass>
         <!-- name appended to standard jar name to indicate shaded/executable version -->
         <shadedClassifierName>executable</shadedClassifierName>
     </properties>
@@ -100,7 +100,7 @@
 
             <plugin>
                 <!-- executes the program -->
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>br.pucrs.list</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.3.1</version>
                 <executions>
