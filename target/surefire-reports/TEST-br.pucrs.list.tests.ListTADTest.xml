@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="21" failures="0" name="br.pucrs.list.tests.ListTADTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="21" failures="0" name="br.pucrs.list.tests.ListTADTest" time="0.063" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -61,22 +61,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetFirst" time="0.005"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetFirst" time="0.059"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddLast" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGet" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testCount" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddD" time="0"/>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testSize" time="0"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testSize" time="0.001"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveFirst" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddFirst" time="0"/>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddIntD0" time="0"/>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddIntD1" time="0.001"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddIntD0" time="0.001"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testAddIntD1" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetExc1" time="0"/>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetExc2" time="0.007"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetExc2" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetExc3" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testGetLast" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveInt1" time="0"/>
-  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveInt2" time="0"/>
+  <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveInt2" time="0.002"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveInt3" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveInt4" time="0"/>
   <testcase classname="br.pucrs.list.tests.ListTADTest" name="testRemoveLast" time="0"/>

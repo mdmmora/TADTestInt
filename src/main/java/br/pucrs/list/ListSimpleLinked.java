@@ -14,6 +14,7 @@ public class ListSimpleLinked <D extends Comparable<D>> implements ListTAD<D>, S
 	public class Node implements Serializable, Comparable<Node> {		
 
 	    private Node refNext;
+	    private int i;
 	    private D it;
 	    
 	    public Node()
