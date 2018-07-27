@@ -1,4 +1,4 @@
-package br.pucrs.list.tests; 
+package br.pucrs.list; 
 
 import static org.junit.Assert.*;
 
